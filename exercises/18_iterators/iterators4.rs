@@ -8,8 +8,22 @@ fn factorial(num: u64) -> u64 {
     // Try not to use:
     // - imperative style loops (for/while)
     // - additional variables
+
+    // First Impl that satisfy above But uses recursion:
+    // if num < 2 {
+    //     1
+    // } else {
+    //     num * factorial(num - 1)
+    // }
+
     // For an extra challenge, don't use:
     // - recursion
+
+    // Second Impl using fold (produce warning)
+    // (1..=num).fold(1, |acc, n| acc * n)
+
+    // Final Impl
+    (1..=num).product()
 }
 
 fn main() {
